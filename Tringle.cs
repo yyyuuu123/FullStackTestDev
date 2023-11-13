@@ -36,5 +36,7 @@ namespace TestApp
             double area = Math.Sqrt(p * (p - SideA) * (p - SideA) * (p - SideC));
             return area;
         }
+
+        static 
     }
 }

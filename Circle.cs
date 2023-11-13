@@ -24,12 +24,12 @@ namespace TestApp
             _sResult = default;
         }
 
-        public override string GetSomeName()
+        public override string GetName()
         {
             return "Circle";
         }
 
-        public override double GetAreaFigure()
+        public override double GetArea()
         {
             _sResult = (Radius * Radius) * PI;
             return Math.Round(_sResult, 3);
