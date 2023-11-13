@@ -25,15 +25,16 @@ namespace TestApp
             _sResult = default(double);
         }
 
-        public override string GetSomeName()
+        public override string GetName()
         {
             return "Tringle";
         }
 
-        public override double GetAreaFigure()
+        public override double GetArea()
         {
-            _sResult = (SideA + SideB + SideC) / 2.0;
-            return _sResult;
+            double p = (SideA + SideB + SideC) / 2; 
+            double area = Math.Sqrt(p * (p - SideA) * (p - SideA) * (p - SideC));
+            return area;
         }
     }
 }
