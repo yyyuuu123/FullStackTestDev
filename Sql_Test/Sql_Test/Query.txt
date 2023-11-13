@@ -1,0 +1,8 @@
+SELECT     Product.Product_Name, Product.Price, Category.Category_Name
+
+FROM         Product LEFT OUTER JOIN
+
+                      ProoductCategory ON Product.Id = ProoductCategory.IdProduct LEFT OUTER JOIN
+
+                      Category ON ProoductCategory.IdCategory = Category.Id
+
