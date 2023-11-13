@@ -32,11 +32,25 @@ namespace TestApp
 
         public override double GetArea()
         {
-            double p = (SideA + SideB + SideC) / 2; 
+            double p = (SideA + SideB + SideC) / 2;
             double area = Math.Sqrt(p * (p - SideA) * (p - SideA) * (p - SideC));
             return area;
         }
 
-        static 
+        public static bool IsRightTriangle(double side1, double side2, double side3)
+        {
+            double squareSide1 = Math.Pow(side1, 2);
+            double squareSide2 = Math.Pow(side2, 2);
+            double squareSide3 = Math.Pow(side3, 2);
+
+            if (squareSide1 == squareSide2 + squareSide3 || squareSide2 == squareSide1 + squareSide3 || squareSide3 == squareSide1 + squareSide2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
