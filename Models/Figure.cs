@@ -8,7 +8,7 @@ namespace TestApp.Model
 {
     public abstract class Figure
     {
-        public abstract string GetSomeName();
+        public abstract string GetFigureName();
         public abstract double GetAreaFigure();
     }
 }
