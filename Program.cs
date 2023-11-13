@@ -1,6 +1,7 @@
 ﻿using TestApp;
 using TestApp.Exeptions;
 using TestApp.Model;
+using TestApp.Utils;
 
 Figure circle = new Circle(5);
 double circleArea = circle.GetArea();
@@ -27,8 +28,9 @@ foreach (Figure item in figures)
 {
     try
     {
+        Console.WriteLine();
         double getShapeCompileTime = CompileTime<Figure>.GetInCompleTime(item);
-        Console.WriteLine(getShapeCompileTime);
+        Console.WriteLine($"compile-time: {item.GetName()} - {getShapeCompileTime}");
     }
     catch (NotFoundompileTime ex)
     {
